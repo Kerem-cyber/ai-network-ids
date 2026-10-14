@@ -69,14 +69,14 @@ Kurulu paketin aynı sürüm olduğunu doğrulayıp mevcut dosyaları yedekleyer
 
 ## Modeller
 
-**Model dosyaları şu anda bu GitHub deposunda yayımlanmamıştır.** Aşağıdaki tablo yerel teslim arşivindeki modelleri açıklar. Paneli çalıştırmak için yerel arşivdeki `models/gelistirilmis_model.joblib` dosyasını `models/` klasörüne eklemek gerekir. Sadece bu depoyu indirmek hazır model sağlamaz.
+Eğitilmiş model dosyaları `models/` klasöründe bulunmaktadır. Panel `models/gelistirilmis_model.joblib` dosyasını kullanır; diğer modeller önceki karşılaştırmalar ve laboratuvar deneyleri için korunmuştur. Bu dosyaların yayımlanması, tüm modellerin canlı ağda doğrulandığı anlamına gelmez.
 
 | Dosya | Rol |
 |---|---|
 | `models/gelistirilmis_model.joblib` | Panelin kullandığı aktif dört özellikli model |
 | `models/ddos_model.joblib`, `models/uc_sinif_model.joblib` | Önceki CIC-IDS2017 CSV deneyleri |
 | `models/ortak_model.joblib`, `models/portsuz_model.joblib` | Özellik karşılaştırma deneyleri |
-| `yerel_model_v1.joblib` (bu depoya yüklenmedi) | Yerel akış deneyi; tek normal başarısız bağlantıda yanlış alarm verdi; yalnızca yerel teslim arşivinde |
+| `models/yerel_model_v1.joblib` | Yerel akış deneyi; tek normal başarısız bağlantıda yanlış alarm verdi; panele bağlı değil |
 | `models/davranis_model_v1.joblib` | Deneysel 10 saniyelik davranış penceresi modeli; panele bağlı değil |
 
 Aktif model hedef port, ileri/geri paket sayısı ve akış süresini kullanır. Süre `izle.py` içinde saniyeden mikrosaniyeye dönüştürülür. Yerel model saniye kullanır; deneysel modeller aktif model dosyasıyla doğrudan yer değiştiremez.
