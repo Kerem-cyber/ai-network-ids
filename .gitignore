@@ -1,0 +1,13 @@
+.venv/
+models/
+*.joblib
+__pycache__/
+*.py[cod]
+data/
+kayitlar/
+*.pcap
+*.pcapng
+*.bak
+*.tar.gz
+.env
+.env.*
